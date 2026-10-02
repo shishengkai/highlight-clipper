@@ -1,0 +1,23 @@
+name: Python 3.12 验证
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: 安装测试用 FFmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: 执行离线测试
+        run: python -m unittest discover -s tests -v
+      - name: 检查技能入口
+        run: python skills/highlight-clipper/scripts/highlight_clipper.py doctor

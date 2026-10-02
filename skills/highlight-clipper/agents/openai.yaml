@@ -1,0 +1,4 @@
+interface:
+  display_name: "高光切片"
+  short_description: "发现长视频的精彩内容，保留上下文并切出可比较的片段。"
+  default_prompt: "使用 $highlight-clipper 分析视频，充分发现高光候选、保留必要上下文，切出全部候选并生成观看报告。"

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "source_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "transcript_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "source_structure": "合成演示：六条虚构对话字幕，图形与测试音不对应真实发言。",
+  "overview": "虚构问答讨论先做小型实验的个人经验，展示完整问答版与回答版的上下文比较。",
+  "passes": {
+    "stories_examples": "通读六句，2—3 句构成从准备到小实验的转折，保留在 c01。",
+    "ideas_conflicts": "5—6 句包含错误与计划的对照及适用范围，保留在 c02 和回答变体。",
+    "language_interaction": "1、4 是两个问题，分别连接后续回答；两个问题都不应误归为回答者的观点。",
+    "omission_review": "复读全部六句及两个收尾：没有另行遗漏区域，c02_answer 是上下文变体而非额外发现。此为结构演示，不构成真实选片质量证据。"
+  },
+  "topics": [
+    {"id": "t01", "title": "第一次尝试为何失败", "start_id": 1, "end_id": 3, "source_layer": "虚构问答", "candidate_ids": ["c01"], "audit_note": "包含问题与从准备到实验的转折。"},
+    {"id": "t02", "title": "错误带来的个人经验", "start_id": 4, "end_id": 6, "source_layer": "虚构问答", "candidate_ids": ["c02", "c02_answer"], "audit_note": "完整问答和回答版都保留末句适用范围，不另计两个亮点。"}
+  ],
+  "candidates": [
+    {
+      "id": "c01", "title": "先做一个小实验", "priority": "优先", "types": ["故事转折", "个人经验"],
+      "reason": "通过准备与实践的转变表达经验，有具体行为和结果。",
+      "context_note": "保留问题，以及为何失败到如何改进的完整过程。",
+      "source_layer": "虚构问答", "range": {"start_id": 1, "end_id": 3}, "core": {"start_id": 2, "end_id": 3},
+      "question_ids": [1], "variant_of": null,
+      "review": {"attribution": "由演示脚本指定角色；没有真实人物。", "context": "保留问题、失败原因和转折。", "boundary": "合成字幕的句边界；不代表真实听审。"}
+    },
+    {
+      "id": "c02", "title": "有用的错误与完美的计划", "priority": "优先", "types": ["观点对照", "问答互动"],
+      "reason": "表达集中，并有个人经验适用范围的收束。",
+      "context_note": "保留追问和末句限定，供与回答版比较。",
+      "source_layer": "虚构问答", "range": {"start_id": 4, "end_id": 6}, "core": {"start_id": 5, "end_id": 6},
+      "question_ids": [4], "variant_of": null,
+      "review": {"attribution": "由演示脚本指定角色。", "context": "6 句限定是完整意思的一部分，保留。", "boundary": "合成字幕句级边界，未进行真实语音听审。"}
+    },
+    {
+      "id": "c02_answer", "title": "有用的错误：回答版", "priority": "备选", "types": ["上下文比较"],
+      "reason": "与完整问答相比，观察从回答开始是否能独立理解。",
+      "context_note": "去掉第 4 句问题，保留观点及第 6 句适用范围；与 c02 内容实际重叠。",
+      "source_layer": "虚构问答", "range": {"start_id": 5, "end_id": 6}, "core": {"start_id": 5, "end_id": 6},
+      "question_ids": [4], "variant_of": "c02",
+      "review": {"attribution": "由演示脚本指定角色。", "context": "回答可独立成句；是否更好由观看者比较。", "boundary": "只使用合成字幕边界，未进行真实语音听审。"}
+    }
+  ],
+  "first_watch": ["c01", "c02"]
+}

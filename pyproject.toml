@@ -1,0 +1,14 @@
+[project]
+name = "highlight-clipper"
+version = "0.1.0"
+description = "由 Codex 发现长视频高光，使用 Python 与 FFmpeg 导出可复核切片"
+requires-python = ">=3.12,<3.13"
+license = "MIT"
+dependencies = []
+
+[tool.ruff]
+target-version = "py312"
+line-length = 110
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
